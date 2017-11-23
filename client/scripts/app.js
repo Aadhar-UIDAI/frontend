@@ -15,7 +15,7 @@
         }
 
     ];
-    var app = angular.module('x1',['ui.router'])
+    var app = angular.module('x1',['ui.router' ])
         .config(function($stateProvider,$urlRouterProvider){
             $urlRouterProvider.otherwise('/');
             angular.forEach(states,function(state){
