@@ -26,7 +26,7 @@
 
                             <input id='password' class="" type="password" ng-model="lctrl.password"  />
 
-                            <input class='btn btn-large green' type='submit' ng-click="lctrl.success()" />
+                            <input class='btn btn-large green' type='submit' ng-click="lctrl.login()" />
 
                             <span style="float: right; padding-top: 6px;">
 				            	<input id="remember" type="checkbox" name="remember">
@@ -69,7 +69,7 @@
             <div class="row">
                 <div class="col s12" style="padding: 20px 0;">
                     <h5 class="lato white-text" style="display: inline; vertical-align: middle; font-weight: 600; margin-right: 10px;">need an account? </h5>
-                    <a class="login btn orange" style="text-decoration:none;" onclick="href='/signup.php'" >sign up here</a>
+                    <a class="login btn orange" style="text-decoration:none;" href="" ng-click="lctrl.signup()" >sign up here</a>
                 </div>
             </div>
 

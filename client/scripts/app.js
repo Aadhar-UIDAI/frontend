@@ -24,7 +24,19 @@
                         visible:false
                     }
                 }
+        },{
+            name: 'Registeration',
+            state:
+                {
+                    url:'/register',
+                    templateUrl: '../views/registerpage.html',
+                    data : {
+                        text:"Registeration Page",
+                        visible:false
+                    }
+                }
         }
+
 
     ];
     var app = angular.module('x1',['ui.router' ])
