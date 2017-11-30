@@ -1,10 +1,11 @@
 (function(){
     angular.module('x1').controller("Homecontrollers",Homecontrollers);
-    Homecontrollers.$inject=[];
-    function Homecontrollers() {
+    Homecontrollers.$inject=['$state'];
+    function Homecontrollers($state) {
     var ctrl=this;
-    ctrl.func=function(){
-        console.log("working");
+    ctrl.travloginpage=function(){
+        $state.go('Loginpage');
+        console.log("Traversal success");
     }
     }
     })();

@@ -12,6 +12,18 @@
                         visible:false
                     }
                 }
+        },
+        {
+            name: 'Loginpage',
+            state:
+                {
+                    url:'/login',
+                    templateUrl: '../views/loginpage.html',
+                    data : {
+                        text:"LOGINPAGE",
+                        visible:false
+                    }
+                }
         }
 
     ];
