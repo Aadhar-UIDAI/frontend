@@ -1,11 +1,11 @@
 (function(){
     angular.module('x1').controller("Logincontrollers",Logincontrollers);
-    Logincontrollers.$inject=['$state','$window','MainService'];
-    function Logincontrollers($state,$window,MainService) {
+    Logincontrollers.$inject=['$state','$window','MainService','$cookieStore'];
+    function Logincontrollers($state,$window,MainService,$cookieStore) {
         var ctrl=this;
         ctrl.signup=function () {
             $state.go('Registeration');
-        }
+        };
         ctrl.login=function () {
                 var data ={
                     username : ctrl.username,
@@ -14,6 +14,7 @@
                 console.log(data);
                 MainService.loginsubmit(data).then(function(response){
                     if(response.status==200){
+                        $cookieStore.put("userDetails",response.data);
                         alert("Logged in!!!");
                     }
                     else if(response.status==402)
