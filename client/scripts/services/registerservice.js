@@ -10,11 +10,9 @@
             return $http.post('http://localhost:8080/register',data).then(successfunction,failurefunction);
         }
         function successfunction(data){
-            console.log("Registeration API success");
             return data;
         }
         function failurefunction(err){
-            console.log(err);
             return err;
         }
     }

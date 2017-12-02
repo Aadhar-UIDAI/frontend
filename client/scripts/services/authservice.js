@@ -8,15 +8,12 @@
 
         function verifysession(){
             var details =$cookieStore.get("userDetails");
-            console.log(details);
             return $http.post('http://localhost:8080/auth',details).then(successfunction,failurefunction);
         }
         function successfunction(data){
-            console.log("auth API success");
             return data;
         }
         function failurefunction(err){
-            console.log(err);
             return err;
         }
     }

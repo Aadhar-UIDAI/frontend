@@ -15,7 +15,7 @@
             console.log(data);
             RegisterService.registerdata(data).then(function(response){
                 if(response.status==200){
-                    alert("Logged in!!!");
+                    alert("Registration Success");
                 }
                 else if(response.status==402)
                 {
@@ -24,6 +24,10 @@
                 else if(response.status==401)
                 {
                     alert("Password is incorrect");
+                }
+                else if(response.status==403)
+                {
+                    alert("User already exists");
                 }
             });
         };

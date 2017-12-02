@@ -4,17 +4,19 @@
     function MainService($http){
         var service={};
         service.loginsubmit=loginsubmit;
+        service.logout=logout;
         return service;
 
         function loginsubmit(data){
             return $http.post('http://localhost:8080/login',data).then(successfunction,failurefunction);
         }
+        function logout(data){
+            return $http.post('http://localhost:8080/logout',data).then(successfunction,failurefunction);
+        }
         function successfunction(data){
-            console.log("Login API success");
             return data;
         }
         function failurefunction(err){
-            console.log(err);
             return err;
         }
     }

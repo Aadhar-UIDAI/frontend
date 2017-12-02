@@ -39,10 +39,24 @@
                 <div class="col s12">
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="" ng-show="hctrl.isUserLoggedIn()" ng-click="hctrl.travpage1()" class="waves-effect waves-light btn darken-2 grey-text text-darken-4 segment-track-login">Page1</a>
+                        </li>
+                    </ul><ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="" ng-show="hctrl.isUserLoggedIn()" ng-click="hctrl.travpage2()" class="waves-effect waves-light btn darken-2 grey-text text-darken-4 segment-track-login">Page2</a>
+                    </li>
+                </ul>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="" ng-show="hctrl.isUserLoggedIn()" ng-click="hctrl.logout()" class="waves-effect waves-light btn darken-2 grey-text text-darken-4 segment-track-login">Logout</a>
+                        </li>
+                    </ul>
                     <!-- Navbar menu -->
                     <ul class="right hide-on-med-and-down">
                         <li>
-                            <a href="" ng-click="hctrl.travloginpage()" class="waves-effect waves-light btn darken-2 grey-text text-darken-4 segment-track-login">Login</a>
+                            <a href="" ng-show="!hctrl.isUserLoggedIn()" ng-click="hctrl.travloginpage()" class="waves-effect waves-light btn darken-2 grey-text text-darken-4 segment-track-login">Login</a>
                         </li>
                     </ul>
 

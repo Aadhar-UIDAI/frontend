@@ -24,7 +24,8 @@
                         visible:false
                     }
                 }
-        },{
+        },
+        {
             name: 'Registeration',
             state:
                 {
@@ -32,6 +33,30 @@
                     templateUrl: '../views/registerpage.html',
                     data : {
                         text:"Registeration Page",
+                        visible:false
+                    }
+                }
+        },
+        {
+            name: 'Page1',
+            state:
+                {
+                    url:'/page1',
+                    templateUrl: '../views/page1.html',
+                    data : {
+                        text:"Page1",
+                        visible:false
+                    }
+                }
+        },
+        {
+            name: 'Page2',
+            state:
+                {
+                    url:'/page2',
+                    templateUrl: '../views/page2.html',
+                    data : {
+                        text:"Page2",
                         visible:false
                     }
                 }
