@@ -1,22 +1,21 @@
 (function(){
-    angular.module('x1').controller("Logincontrollers",Logincontrollers);
-    Logincontrollers.$inject=['$state','$window','MainService','$cookieStore'];
-    function Logincontrollers($state,$window,MainService,$cookieStore) {
+    angular.module('x1').controller("SignupControllers",SignupControllers);
+    SignupControllers.$inject=['$state','$window','RegisterService'];
+    function SignupControllers($state,$window,RegisterService) {
         var ctrl=this;
-        ctrl.signup=function () {
-            $state.go('Registeration');
-        };
         ctrl.login=function () {
+            $state.go('Loginpage')
+        };
+        ctrl.register=function () {
             var data ={
+                name : ctrl.name,
                 username : ctrl.username,
                 password : ctrl.password
             };
             console.log(data);
-            MainService.loginsubmit(data).then(function(response){
+            RegisterService.registerdata(data).then(function(response){
                 if(response.status==200){
-                    $cookieStore.put("userDetails",response.data);
-                    alert("Logged in!!!");
-                    $state.go('Homepage');
+                    alert("Registration Success");
                 }
                 else if(response.status==402)
                 {
@@ -26,8 +25,11 @@
                 {
                     alert("Password is incorrect");
                 }
+                else if(response.status==403)
+                {
+                    alert("User already exists");
+                }
             });
         };
-
     }
 })();
