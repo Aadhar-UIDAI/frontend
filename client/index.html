@@ -5,8 +5,12 @@
     <script src="./js/angularroutemin.js"></script>
     <script src="./js/ngcookie.js"></script>
     <script type="text/javascript" src="./scripts/app.js"></script>
+    <script type="text/javascript" src="./scripts/services/mainservice.js"></script>
+    <script type="text/javascript" src="./scripts/services/registerservice.js"></script>
+    <script type="text/javascript" src="./scripts/services/authservice.js"></script>
     <script type="text/javascript" src="./scripts/controllers/homecontroller.js"></script>
     <script type="text/javascript" src="./scripts/controllers/logincontroller.js"></script>
+    <script type="text/javascript" src="./scripts/controllers/signupcontroller.js"></script>
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -30,16 +34,29 @@
             <li><a href="/features/hosting">Hosting</a></li>
 
         </ul>
-
         <nav class="white">
             <div class="nav-wrapper">
                 <div class="col s12">
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="" ng-show="hctrl.isUserLoggedIn()" ng-click="hctrl.travpage1()" class="waves-effect waves-light btn darken-2 grey-text text-darken-4 segment-track-login">Page1</a>
+                        </li>
+                    </ul><ul class="right hide-on-med-and-down">
+                    <li>
+                        <a href="" ng-show="hctrl.isUserLoggedIn()" ng-click="hctrl.travpage2()" class="waves-effect waves-light btn darken-2 grey-text text-darken-4 segment-track-login">Page2</a>
+                    </li>
+                </ul>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="" ng-show="hctrl.isUserLoggedIn()" ng-click="hctrl.logout()" class="waves-effect waves-light btn darken-2 grey-text text-darken-4 segment-track-login">Logout</a>
+                        </li>
+                    </ul>
                     <!-- Navbar menu -->
                     <ul class="right hide-on-med-and-down">
                         <li>
-                            <a href="" ng-click="hctrl.travloginpage()" class="waves-effect waves-light btn darken-2 grey-text text-darken-4 segment-track-login">Login</a>
+                            <a href="" ng-show="!hctrl.isUserLoggedIn()" ng-click="hctrl.travloginpage()" class="waves-effect waves-light btn darken-2 grey-text text-darken-4 segment-track-login">Login</a>
                         </li>
                     </ul>
 
